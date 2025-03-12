@@ -64,13 +64,6 @@ def cruzamento(pais: List[List[int]], taxa_cruzamento: float) -> List[int]:
     return lista_filhos
 
 
-"""Troca 2 genes de posição:
-    - 1 Gene é mutado
-    - Sorteia-se outro para ser trocado com ele
-    - Troca-se os dois
-"""
-
-
 def mutacao_individuo(filho: List[int], taxa_mutacao: float, n_genes: int) -> List[int]:
     """mutação de um individuo"""
     for i in range(n_genes - 1):
@@ -126,13 +119,6 @@ def selecao_sobreviventes(
             pop[c] = filhos[c]
             apt_pop[c] = apt_filhos[c]
     return pop, apt_pop
-
-""" 
-    Ajustar a entrada para o Berlin52: (ponto x y) --> 1 565.0 575.0
-
-    tamanho_pop --> Quantos caminhos vão ter --> len(pop)
-    n_genes --> Quantas cidades vão ter em cada caminho 
-"""
 
 
 def populacao_inicial(tamanho_pop: int, n_genes: int) -> List[List[int]]:
